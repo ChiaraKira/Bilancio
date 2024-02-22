@@ -1,0 +1,119 @@
+h1{
+  color: #645CAA
+}
+
+.red{
+    background-color: #FF8F8F;
+}
+
+.green{
+    background-color: #9ADE7B;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;
+}
+
+.formato{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    
+}
+
+.centrato{
+    text-align: center;
+    width:60%;
+    background-color: #C3BEF0;
+    border-color:#CCA8E9
+}
+
+.centrato:focus{
+  outline-color: #645CAA;
+}
+
+.btn{
+    margin: 0px 5px;
+}
+
+
+.table-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.tNumeri {
+    border: 5px solid #C3BEF0;
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+    background-color: #CADEFC;
+    border-radius: 15px;
+  }
+  
+ th, td {
+    border-bottom: 2px solid #67543d;
+    padding: 10px;
+  }
+  
+  tr:last-child > td {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  tr:last-child>td:first-child{
+    border-bottom-left-radius: 10px;
+  }
+
+  tr:last-child>td:last-child{
+    border-bottom-right-radius: 10px;
+  }
+
+  .remove{
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .btn-green{
+    background-color: #9ADE7B;
+    border-color: #6fa058;
+  }
+
+  .btn-green:hover{
+    background-color:#6fa058;
+    border-color: #9ADE7B;
+  }
+
+  .btn-red{
+    background-color: #FF8F8F;
+    border-color: #ae6363;
+  }
+  .btn-red:hover{
+    background-color: #ae6363;
+    border-color: #FF8F8F;
+  }
+  
+  .ris-e{
+    background-color:#CCA8E9;
+    color: #475e48;
+  }
+
+  .ris-u{
+    background-color: #E0AED0;
+    color: #7D0A0A;
+  }
+
+  .ris-s{
+    background-color: #71b479;
+  }
+
+  .ris-s2{
+    background-color: #8a4e62
+  }

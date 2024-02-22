@@ -1,0 +1,41 @@
+<body>
+<div class="container">
+        <h1>Bilancio</h1>
+        <div class="formato">
+            <input [(ngModel)] = "numero" type="number" min="0" step="0.01" class="centrato">
+            <button class="btn btn-green" (click) = "aggiungiEntrata()">&plus;</button>
+            <button class="btn btn-red" (click) = "aggiungiUscita()">&minus;</button>
+        </div>
+
+        <div class="table-container">
+            <table class="tNumeri">
+                <tr>
+                    <th colspan="2">Movimenti</th>
+                </tr>
+            
+                <tr *ngFor = "let b of bilancio; let i = index;" [ngClass] = "{'red': b < 0, 'green': b > 0}">
+                    <td>€{{b | number:'1.2-2'}}  
+                    </td>
+                    <td>
+                        <button class="remove" (click) = "rimuoviMovimento(i)" [ngClass] = "{'btn-green': b < 0, 'btn-red': b > 0}" >
+                            X
+                        </button>
+                    </td>
+                </tr>
+                <tr class="ris-e"> 
+                    <th>Entrate:</th>
+                    <td>€{{totEntrate()| number:'1.2-2'}}</td>
+                </tr>
+                <tr class="ris-u">
+                    <th>Uscite:</th>
+                    <td>€{{totUscite()| number:'1.2-2'}}</td>
+                </tr>
+
+                <tr [ngClass] = "{'ris-s': sommaMovimenti() > 0, 'ris-s2': sommaMovimenti() < 0}">
+                    <td>Totale:</td>
+                    <td>€ {{ sommaMovimenti() | number:'1.2-2'}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
